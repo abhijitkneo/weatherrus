@@ -1,0 +1,42 @@
+//sidebar style
+.sidebar {
+	width: 250px;
+	height: calc(100% - 16px);
+	box-shadow: 4px 4px 12px 0 rgba(125, 125, 125, 0.1);
+	position: fixed;
+	background: rgba(255,255,255,0.25);
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	.logo {
+		text-align: left;
+		margin: 0;
+		border-bottom: solid 1px var(--color-primary);
+		padding-bottom: 16px;
+		padding-top: 10px;
+	}
+	.sidemenu {
+		li {
+			margin-bottom: 2px;
+			a {
+				text-decoration: none;
+				color: var(--color-primary);
+				padding: 12px;
+				transition: all linear 0.2s;
+				border-radius: calc(var(--border-radius) - 8px);
+				align-items: center;
+				gap: 12px;
+				&.active, &:hover {
+					background: rgba(255, 255, 255, 0.5);
+					font-weight: 600;
+				}
+				i {
+					font-size: 24px;
+				}
+			}
+		}
+		&.secondary {
+			margin-top: auto;
+		}
+	}
+}

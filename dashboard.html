@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Weather R'Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard">
+    <main>
+        <div class="sidebar">
+            <figure class="logo">
+                <img src="images/logo.svg" alt="">
+            </figure>
+            <ul class="sidemenu list-unstyled">
+                <li>
+                    <a href="#" class="d-flex active">
+                        <img src="images/icons/icon-dashboard.svg" alt="">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex">
+                        <img src="images/icons/icon-forecast.svg" alt="">
+                        Forecast
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex">
+                        <img src="images/icons/icon-historical-data.svg" alt="">
+                        Historical Data
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex">
+                        <img src="images/icons/icon-anomaly-tracker.svg" alt="">
+                        Anomaly Tracker
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidemenu secondary list-unstyled">
+                <li>
+                    <a href="#" class="d-flex">
+                        <i class="bi bi-gear fs-5"></i>
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex">
+                        <i class="bi bi-box-arrow-right fs-5"></i>
+                        Log Out
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- header start -->
+            <header id="main-header" class="d-flex">
+                <!-- header search -->
+                <div class="header-left-col header-search position-relative">
+                    <input type="search" class="form-control border-0 w-100" name="search" id="search" placeholder="Search..." />
+                    <i class="bi bi-search position-absolute"></i>
+                </div>
+
+                <div class="header-right-col">
+                    <div class="theme-mode-toggle">
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="checkbox-label bg-white bg-opacity-50">
+                            <span class="ball shadow-sm"></span>
+                            <i class="bi bi-brightness-high-fill position-relative fs-4 ms-2"></i>
+                            <i class="bi bi-moon position-relative fs-4 me-2"></i>
+                        </label>
+                    </div>
+                    <div class="notification-wrapper">
+                        <button type="button" class="btn position-relative border-0 p-0">
+                            <i class="bi bi-bell fs-3"></i>
+                            <i class="bi bi-circle-fill position-absolute status"></i>
+                        </button>
+                    </div>
+                    <div class="header-user-dropdown dropdown position-relative">
+                        <button class="btn btn-transparent d-flex p-0 border-0" type="button">
+                            <img src="images/user-avatar.png" class="flex-shrink-0" alt="">
+                            <p class="fw-bold text-start lh-sm m-0 flex-shrink-0">John Doe <span class="d-block fw-normal">Project Manager</span></p>
+                            <i class="bi bi-chevron-down flex-shrink-0"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-3">
+                <!-- alert start -->
+                <div class="alert bg-primary d-flex" role="alert">
+                    <p class="d-inline-flex m-0">
+                        <i class="bi bi-circle-fill"></i> Moderate Alert : Thunderstorm Advisory in Johannesburg
+                    </p>
+                    <div class="action-buttons">
+                        <a href="#" class="detail-link">View Details</a>
+                        <button type="button" class="btn btn-close-alert p-0" data-bs-dismiss="alert" aria-label="Close">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <section class="d-flex weather-details">
+                    <div class="card main-weather-card p-4">
+                        <div class="card-body">
+                            <div class="d-flex city-title">
+                                <div class="bg-primary city-name">
+                                    <i class="bi bi-geo-alt-fill"></i> Johannesburg
+                                </div>
+                                <div class="temp-unit">
+                                    <button type="button" class="btn btn-transparent border-0 active">C</button>
+                                    <button type="button" class="btn btn-transparent border-0">F</button>
+                                </div>
+                            </div>
+                            <div class="d-flex weather-time-details">
+                                <div class="date-time-stamp">
+                                    <h1 class="fw-medium">Monday</h1>
+                                    <p class="m-0">24 Dec, 2023</p>
+                                    <p class="m-0">08:45 AM</p>
+                                </div>
+                                <div class="weather-icon">
+                                    <figure class="m-0">
+                                        <img src="images/weather-icon.svg" class="mt-n4" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="d-flex temperature-details">
+                                <div class="temp-left-col">
+                                    <h2 class="fw-medium">26<sup>o</sup>C</h2>
+                                    <p class="m-0">High: 26 Low: 9</p>
+                                </div>
+                                <div class="temp-right-col">
+                                    <h2 class="fw-normal">Sunny</h2>
+                                    <p class="m-0">Feels Like 22</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="humidity-detail-wrapper d-flex">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <p class="d-flex title">
+                                    <img src="images/icons/icon-humidity.svg" alt="">
+                                    <span class="text-uppercase">Humidity</span>
+                                </p>
+                                <h3 class="fw-semibold">85 <span>%</span></h3>
+                                <p class="m-0">Humidity is good</p>
+                            </div>
+                        </div>
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <p class="d-flex title">
+                                    <img src="images/icons/icon-rainfall.svg" alt="">
+                                    <span class="text-uppercase">Rainfail</span>
+                                </p>
+                                <h3 class="fw-semibold">1.88mm <span class="d-block">In last hour</span></h3>
+                                <p class="m-0">1.2mm expected in next hours</p>
+                            </div>
+                        </div>
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <p class="d-flex title">
+                                    <img src="images/icons/icon-uv-index.svg" alt="">
+                                    <span class="text-uppercase">UV Index</span>
+                                </p>
+                                <h3 class="fw-semibold">4 <span class="d-block">Moderate</span></h3>
+                                <input type="range" min="0" max="100" value="30" class="custom-range">
+                            </div>
+                        </div>
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <p class="d-flex title">
+                                    <img src="images/icons/icon-visibility.svg" alt="">
+                                    <span class="text-uppercase">Visibility</span>
+                                </p>
+                                <h3 class="fw-semibold">8 km</h3>
+                                <p class="m-0">Similar to the actual temperature</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weather-stats">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <img src="images/icons/icon-statistics.svg" alt="">
+                                <h3 class="fw-semibold">Check Full Stats</h3>
+                                <a href="#">
+                                    <img src="images/icons/icon-view-more.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <img src="images/icons/icon-weekly-forecast.svg" alt="">
+                                <h3 class="fw-semibold">View Weekly Forecast</h3>
+                                <a href="#">
+                                    <img src="images/icons/icon-view-more.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- section anomalies -->
+                <section class="anomalies-container">
+                    <div class="card p-4 total-anomalies">
+                        <div class="card-body">
+                            <div class="total-anomalies-details">
+                                <div class="card-title">
+                                    <h3 class="fw-medium">Total Anomalies Recorded</h3>
+                                    <h2>14</h2>
+                                </div>
+                                <div class="duration-toggle">
+                                    <div class="dropdown position-relative">
+                                        <button class="btn btn-transparent d-flex" type="button">
+                                            <p class="fw-medium m-0 flex-shrink-0">Last Month</p>
+                                            <i class="bi bi-chevron-down flex-shrink-0"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Last Week</a></li>
+                                            <li><a class="dropdown-item" href="#">Last Year</a></li>
+                                        </ul>
+                                    </div>
+                                    <figure class="m-0">
+                                        <img src="images/thermometer.svg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary with-icon w-100 report-anomaly">
+                                Report New Anomaly <i class="bi bi-plus-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card p-4 recent-anomalies">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h2 class="m-0">Recent Anomalies</h2>
+                                <a href="#" class="link-dark">View Details</a>
+                            </div>
+                            <div class="anomaly-list">
+                                <div class="anomaly-card critical p-3">
+                                    <div class="anomaly-state fw-semibold">
+                                        <i class="bi bi-circle-fill status"></i> Critical
+                                    </div>
+                                    <p class="anomaly-title fw-semibold">Severe Thunderstorm Warning in Johannesburg</p>
+                                    <p class="anomaly-info">Heavy rainfall, strong winds, and lightning expected.</p>
+                                    <div class="anomaly-date-time">
+                                        <p class="date m-0">
+                                            <span class="fw-semibold">Date :</span> 24.07.2024
+                                        </p>
+                                        <p class="time m-0">
+                                            <span class="fw-semibold">Time :</span> 3:15 PM
+                                        </p>
+                                    </div>
+                                    <div class="reported-by">
+                                        <p class="m-0"><span class="fw-semibold">Reported by :</span> Field Agent 0021</p>
+                                    </div>
+                                </div>
+                                <div class="anomaly-card moderate p-3">
+                                    <div class="anomaly-state fw-semibold">
+                                        <i class="bi bi-circle-fill status"></i> Moderate
+                                    </div>
+                                    <p class="anomaly-title fw-semibold">Severe Thunderstorm Warning in Johannesburg</p>
+                                    <p class="anomaly-info">Heavy rainfall, strong winds, and lightning expected.</p>
+                                    <div class="anomaly-date-time">
+                                        <p class="date m-0">
+                                            <span class="fw-semibold">Date :</span> 24.07.2024
+                                        </p>
+                                        <p class="time m-0">
+                                            <span class="fw-semibold">Time :</span> 3:15 PM
+                                        </p>
+                                    </div>
+                                    <div class="reported-by">
+                                        <p class="m-0"><span class="fw-semibold">Reported by :</span> Field Agent 0021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- section graphs -->
+                <section class="weather-pictograph-container">
+                    <div class="weather-graph">
+                        <img src="images/weather-graph.png" alt="">
+                    </div>
+                    <div class="weather-map">
+                        <img src="images/weather-map.png" alt="">
+                    </div>
+                </section>
+
+                <!-- anomaly log -->
+                <div class="section anomaly-log">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h2 class="m-0 w-100">
+                                    Anomaly Log 
+                                    <span class="d-block sub-heading fs-14 fw-normal">A comprehensive log of all reported weather anomalies</span>
+                                </h2>
+                                <button type="button" class="btn btn-primary with-icon w-100 report-anomaly">
+                                    Report New Anomaly <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Location</th>
+                                        <th>Description</th>
+                                        <th>Severity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">20.07.2024</td>
+                                        <td class="text-center">2.30 PM</td>
+                                        <td class="text-center">Cape Town</td>
+                                        <td>Unusually strong offshore winds causing minor structural damage.</td>
+                                        <td class="text-center">
+                                            <div class="severity-status critical">
+                                                Critical
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">12.08.2023</td>
+                                        <td class="text-center">7.20 PM</td>
+                                        <td class="text-center">Pretoria</td>
+                                        <td>Sudden hailstorm leading to temporary road closure.</td>
+                                        <td class="text-center">
+                                            <div class="severity-status moderate">
+                                                Moderate
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">20.07.2024</td>
+                                        <td class="text-center">2.30 PM</td>
+                                        <td class="text-center">Cape Town</td>
+                                        <td>Flash flood after minimal rainfall.</td>
+                                        <td class="text-center">
+                                            <div class="severity-status low">
+                                                Low
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

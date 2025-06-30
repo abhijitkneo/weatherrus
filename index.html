@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Weather R'Us | Sign in</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <section class="signin-signup">
+            <div class="left-col w-50 p-4">
+                <figure class="m-0 text-center">
+                    <img src="images/logo.svg" alt="">
+                </figure>
+
+                <div class="data-carousel">
+                    <div class="carousel-image">
+                        <img src="images/slide-1.png" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="text-primary slide-title">A smarter way to monitor the unpredictable.</h3>
+                        <p class="text-primary slide-info m-0">Track, detect, and stay ahead of weather conditions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col w-50 p-4">
+                <div class="theme-mode-toggle">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="checkbox-label bg-white bg-opacity-50">
+                        <span class="ball shadow-sm"></span>
+                        <i class="bi bi-brightness-high-fill position-relative fs-4 ms-2"></i>
+                        <i class="bi bi-moon position-relative fs-4 me-2"></i>
+                    </label>
+                </div>
+
+                <div class="form-container">
+                    <h2>Sign In To Your Account</h2>
+                    <p class="sub-heading fs-14">Welcome back! Please enter your details.</p>
+
+                    <form action="#" class="form w-100">
+                        <div class="form-field position-relative">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            <img src="images/icons/icon-mail.svg" class="position-absolute field-icon" alt="">
+                        </div>
+                        <div class="form-field position-relative">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                            <img src="images/icons/icon-lock.svg" class="position-absolute field-icon" alt="">
+                        </div>
+                        <div class="form-secondary-actions">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="remember-chkbox">
+                                <label class="form-check-label" for="remember-chkbox">Remember me</label>
+                            </div>
+                            <a href="#" class="link-dark fs-14">Forgot Password?</a>
+                        </div>
+                        <a href="signup.html" type="button" class="btn btn-primary text-center w-100 text-decoration-none">Sign In</a>
+
+                        <div class="separator w-100"><span>Or sign in with</span></div>
+
+                        <button type="button" class="btn btn-google">
+                            <img src="images/icons/icon-google.png" alt=""> Google
+                        </button>
+
+                        <p class="fs-14 m-0 text-center">Don't have an account? <a href="#" class="fw-semibold link-dark">Sign Up</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

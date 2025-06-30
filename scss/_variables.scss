@@ -1,0 +1,14 @@
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+);
+
+$input-border-color: #E2E8F0;
+$input-border-focused-color: #d3d8de;
+$input-border-width: 1px;
+$input-border-radius: 12px;

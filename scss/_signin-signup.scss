@@ -1,0 +1,114 @@
+.signin-signup {
+    height: 100vh;
+    display: flex;
+    .left-col {
+        background: linear-gradient(180deg, #AED8FF 0%, #FFE5C6 100%);
+    }
+    .theme-mode-toggle {
+        @include flex-align(null, flex-end, null, null);
+        .checkbox-label {
+            background-color: #D5E4F0;
+        }
+    }
+
+    .right-col {
+        .form-container {
+            height: calc(100vh - 88px);
+            width: 400px;
+            margin: 0 auto;
+            @include flex-align(flex-start, center, null, null);
+            flex-direction: column;
+            h2 {
+                margin-bottom: 10px;
+            }
+            .sub-heading {
+                opacity: 0.5;
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            .form-field {
+                .form-control {
+                    border-radius: 12px;
+                    border: solid $input-border-width $input-border-color;
+                    padding: 18px 16px 18px 48px;
+                    width: calc(100% - 66px);
+                    &:focus {
+                        border-color: $input-border-focused-color;
+                    }
+                }
+                .field-icon {
+                    left: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .form-secondary-actions {
+                @include flex-align(center, space-between, null, null);
+            }
+            .separator {
+                position: relative;
+                display: inline-block;
+                margin: 0 auto;
+                font-size: 12px;
+                color: #64748B;
+                text-align: center;
+                margin: 12px 0;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background: #E2E8F0;
+                    top: 8px;
+                    left: 0;
+                }
+                span {
+                    background: var(--color-white);
+                    padding: 0 10px;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+
+            .btn-google {
+                border: solid 1px #E2E8F0;
+                box-shadow: none;
+            }
+
+            p {
+                a {
+                    text-decoration: none;
+                }
+            }
+            .field-info {
+                opacity: 0.5;
+                margin-top: -10px !important;
+            }
+            .sign-up-heading {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+//carousel style
+.data-carousel {
+    .carousel-image {
+        text-align: center;
+    }
+    .carousel-caption {
+        text-align: center;
+        .slide-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .slide-info {
+            font-size: 16px;
+        }
+    }
+}

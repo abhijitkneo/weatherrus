@@ -1,0 +1,13 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'sidebar.scss';
+@import 'dashboard.scss';
+@import 'signin-signup.scss';
+@import 'common.scss';
+
+
+//content style
+.content {
+	padding-left: 282px;
+	min-height: 100vh;
+}
